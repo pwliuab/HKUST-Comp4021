@@ -1,0 +1,332 @@
+<html>
+<head>
+<style>
+#Expert{
+	font-size:18pt;
+	background-color: yellow;
+	width: 15%;
+	color: black;
+	border-bottom: solid;
+}
+
+#Normal{
+	font-size:18pt;
+	background-color: yellow;
+	width: 15%;
+	color: black;
+	border-bottom: solid;
+}
+
+#Novice{
+	font-size:18pt;
+	background-color: yellow;
+	width: 15%;
+	color: black;
+	border-bottom: solid;
+}
+
+#gameState{
+border-radius: 25px;
+font-size:18pt;
+width: 15%;
+color: white;
+border: 2px solid black;
+background-color: blue;
+}
+hr{
+	width:50%;
+	position: absolute;
+}
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+const expertMode = 1;
+const normalMode = 0;
+const slowMode = -1;
+const start = 1;
+const stop = 0;
+var moving_timer, count_down_timer;	// Declare the two timers
+var score = 0;				// To store the score of the player
+var time_remaining = 10;		// To store the time remaining
+var monster_position=0;			// To store the position of the monster
+var finished=true;			// Indicate whether the game is finished or not
+var hitSound, missSound;		// Declare the two sounds
+var currentMode = 0;
+var gameState = stop;
+function game_start(){
+	// initiate two sounds
+	// count down after one second
+	// let the monster moves
+	if(moving_timer){
+		clearTimeout(moving_timer);
+	}
+	if(clearTimeout){
+		clearTimeout(count_down_timer);
+	}
+	score = 0;
+	time_remaining = 10;
+
+	updateTimerDisplay();
+	updateScoreDisplay();
+	finished = false;
+	hitSound = document.getElementById('ouch');
+	missSound = document.getElementById('boo');
+	count_down();
+	relocate(currentMode);
+}
+
+function updateTimerDisplay(){
+	var timerText = document.getElementById('timer_text');
+	var getTimerText = timerText.innerHTML.split("sec");
+	var getTimerText = getTimerText[0].split(":");
+	var setTimerText = " " + time_remaining.toString()  + " ";
+	timerText.innerHTML = timerText.innerHTML.replace(getTimerText[1], setTimerText);
+}
+
+function updateScoreDisplay(){
+	var scoreText = document.getElementById('score_text').innerHTML;
+	var splitColomn = scoreText.split(":");
+	var previousScore = splitColomn[1];
+	var updatedScore =" " + score.toString();
+	document.getElementById('score_text').innerHTML = scoreText.replace(previousScore, updatedScore);
+
+}
+
+
+function game_stop(){
+	if(moving_timer){
+		clearTimeout(moving_timer);
+	}
+	if(clearTimeout){
+		clearTimeout(count_down_timer);
+	}
+
+	document.images[monster_position].src = 'empty.png';
+	document.images[4].src = 'monster.png';
+	monster_position = 4;
+
+	time_remaining = 10;
+	monster_position = 4;
+	score = 0;
+	finished = true;
+
+	updateTimerDisplay();
+	updateScoreDisplay();
+
+}
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+
+function count_down(){
+	// decrease remaining time by one
+	// update the text display
+	// call the function again after one second or finish the game
+	time_remaining --;
+	var timerText = document.getElementById('timer_text');
+	var getTimerText = timerText.innerHTML.split("sec");
+	var getTimerText = getTimerText[0].split(":");
+	var setTimerText = " " + time_remaining.toString()  + " ";
+	if(getTimerText[1] != " 0 "){
+			timerText.innerHTML = timerText.innerHTML.replace(getTimerText[1], setTimerText);
+	} else {
+		return;
+	}
+
+	console.log(getTimerText[1]);
+	console.log(timerText.innerHTML.length);
+
+	if(time_remaining == 0){
+		game_over();
+		return;
+	}
+	count_down_timer = setTimeout(count_down, 1000);
+
+}
+
+function speedControl(event,mode){
+	// check whether game over or started...
+	if(time_remaining == 0 || finished) {
+		return;
+	}
+	if(moving_timer){
+		clearTimeout(moving_timer);
+	}
+	// start moving
+	console.log(event.target.style);
+	event.target.style.backgroundColor = 'red';
+	currentMode = mode;
+	relocate(mode);
+}
+
+function relocate(mode=normalMode){
+	// clear previous image
+	// generate a random number between 0 and 8
+	// move the monster to the new position
+	// call this function again after certain period of time
+
+	// get random number range[0,9]
+	var speedControl = 1;
+
+	if(mode == expertMode){
+		speedControl = 0.5;
+	} else if (mode == slowMode){
+		speedControl = 2;
+	}
+
+	var randomNum = getRandomInt(9);
+	// clear the original position
+	document.images[monster_position].src = 'empty.png';
+	// create a monster in a random position
+	document.images[randomNum].src = 'monster.png';
+	// record the current position
+	monster_position = randomNum;
+	moving_timer = setTimeout(function(){relocate(mode)}, 600*speedControl);
+}
+
+function game_over(){
+	// set the variable, finished, to true
+	// clear the two timers
+	// alert player
+
+	finished = true;
+	clearTimeout(count_down_timer);
+	clearTimeout(moving_timer);
+	document.images[monster_position].src = 'empty.png';
+	document.images[4].src = 'monster.png';
+	monster_position = 4;
+	alert("GAME OVER");
+	gameState = stop;
+	var getSwitchBtn = document.getElementById("gameState");
+	getSwitchBtn.innerHTML = "Start";
+}
+
+function switchStartAndStop(){
+	var getSwitchBtn = document.getElementById("gameState");
+	if(gameState == start){
+		game_stop();
+		getSwitchBtn.innerHTML = "Start";
+		gameState = stop;
+	} else {
+		game_start();
+		getSwitchBtn.innerHTML = "Stop";
+		gameState = start;
+	}
+
+}
+
+function updateScore(){
+			score ++;
+			// we get the copy of the innerHtNL instaed of reference
+			// we have to call object to change its innerHTML
+			var scoreText = document.getElementById('score_text').innerHTML;
+			var splitColomn = scoreText.split(":");
+			var previousScore = splitColomn[1];
+			var updatedScore =" " + score.toString();
+
+			// update the score by calling the oject reference, instead of modifying the copy of inner innerHTML
+			document.getElementById('score_text').innerHTML = scoreText.replace(previousScore, updatedScore);
+}
+
+function keyboard_event(event){
+	// transform event into key
+	// transform key into image index
+
+	var hit_box = String.fromCharCode(event.keyCode);
+	console.log(hit_box);
+	if (hit_box == monster_position){
+		// updates player score
+		// clear the running timer
+		// ask the monster to relocate now
+		hitSound.pause();
+		hitSound.play();
+		updateScore();
+		clearTimeout(moving_timer);
+		relocate(currentMode);
+
+	} else {
+		missSound.pause();
+		missSound.play();
+	}
+}
+
+function mouse_event(event){
+	if(!event){
+		return;
+	}
+	if(!event.target){
+		return;
+	}
+	var clickdown = event.target;
+	var imageName = event.target.outerHTML;
+	if (imageName.includes("monster.")){
+		// updates player score
+		// clear the running timer
+		// ask the monster to relocate now
+		hitSound.pause();
+		hitSound.play();
+		updateScore();
+		clearTimeout(moving_timer);
+		relocate(currentMode);
+
+	} else if (imageName.includes("empty.")) {
+		missSound.pause();
+		missSound.play();
+	}
+}
+-->
+</script>
+</head>
+
+<body onload="game_stop()" onclick="if (!finished) mouse_event(event)">
+	<audio src="./hammer_files/boo.mp3" type="audio/mpeg" width="0" height="0" id="boo" > </audio>
+	<audio src="./hammer_files/ouch.mp3" type="audio/mpeg" width="0" height="0" id="ouch"> </audio>
+  <table border="10" width="300">
+    <tr>
+      <td height="100" width="100" > <img src="empty.png" height="100" width="100"> </td>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+    </tr>
+    <tr>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+    </tr>
+    <tr>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+      <td height="100" width="100"> <img src="empty.png" height="100" width="100" > </td>
+    </tr>
+	</table>
+	<hr/>
+	<br/>
+	<div id="timer_text" style="font-size:32pt">
+	  Time remaining: 10 sec
+	</div>
+	<div id="score_text" style="font-size:32pt">
+	  Score: 0
+	</div>
+	<hr/>
+	<br/>
+	<div id="Expert" onclick="speedControl(event,expertMode)">
+	  Expert
+	</div>
+	<div id="Normal" onclick="speedControl(event,normalMode)">
+		Normal
+	</div>
+	<div id="Novice" onclick="speedControl(event,slowMode)">
+		Novice
+	</div>
+	<hr/>
+	<br/>
+
+	<div id="gameState" onclick="switchStartAndStop()">
+		Start
+	</div>
+	<br/>
+	<hr/>
+</body>
+
+</html>

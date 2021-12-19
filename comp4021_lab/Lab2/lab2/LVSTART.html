@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Autocomplete - Categories</title>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <style>
+    .ui-autocomplete {
+      max-height: 100px;
+      overflow-y: auto;
+      /* prevent horizontal scrollbar */
+      overflow-x: hidden;
+    }
+    /* IE 6 doesn't support max-height
+     * we use height instead, but this forces the menu to always be this tall
+     */
+    * html .ui-autocomplete {
+      height: 100px;
+    }
+    .ui-autocomplete-category {
+      font-weight: bold;
+      padding: .2em .4em;
+      margin: .8em 0 .2em;
+      line-height: 1.5;
+    }
+    /*
+    @font-face {
+    font-family: Dream Orphans Bold;
+    src: url(dream-orphans-bd.ttf);
+    }
+    body {
+    	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+    	font-size: 70%;
+      background-color: black;
+    }
+
+    .dream-orphans {
+    	font-family: "Dream Orphans Bold";
+    	font-size: 70px;
+      color: white;
+    }
+
+    .searchLabel {
+    	position: fixed;
+    	top: 40%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -130px;
+    }
+
+    .searchBox {
+    	position: fixed;
+    	top: 50%;
+      margin-top: -30px;
+      margin-left: 340px;
+    }
+    */
+    input[type=text] {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      padding: 10px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid #DDDDDD;
+      width: 200%;
+      font-size: 24px;
+    }
+
+    input[type=text]:focus {
+      box-shadow: 0 0 20px rgba(81, 203, 238, 1);
+      padding: 10px;
+      margin: 5px 1px 3px 0px;
+      border: 1px solid rgba(81, 203, 238, 1);
+    }
+
+
+    .red {
+    	color: red;
+    }
+
+    .blue-text {
+    //  font-weight: bold;
+      color:blue;
+    }
+
+    .ui-menu-item a{
+      font-weight: bold;
+    }
+  </style>
+  <script src="jquery-1.11.3.js"></script>
+  <script src="jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    var data = [
+      { label: "anders", category: "" },
+      { label: "andreas", category: "" },
+      { label: "antal", category: "" },
+      { label: "annhhx10", category: "Products" },
+      { label: "annk K12", category: "Products" },
+      { label: "annttop C13", category: "Products" },
+      { label: "anders andersson", category: "People" },
+      { label: "andreas andersson", category: "People" },
+      { label: "andreas johnson", category: "People" }
+    ];
+
+    function split( val ) {
+      return val.split( /,\s*/ );
+    }
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+
+ 		function highlightText(text, $node) {
+ 			var searchText = $.trim(text).toLowerCase(), currentNode = $node.get(0).firstChild, matchIndex, newTextNode, newSpanNode;
+      console.log(searchText);
+      searchText = searchText.split(',');
+      searchText = searchText[searchText.length - 1].trim();
+			while ((matchIndex = currentNode.data.toLowerCase().indexOf(searchText)) >= 0) {
+				newTextNode = currentNode.splitText(matchIndex);
+				currentNode = newTextNode.splitText(searchText.length);
+				newSpanNode = document.createElement("span");
+				newSpanNode.className = "blue-text";
+				currentNode.parentNode.insertBefore(newSpanNode, currentNode);
+				newSpanNode.appendChild(newTextNode);
+			}
+    }
+
+
+		$.widget("custom.catcomplete", $.ui.autocomplete, {
+			_create: function() {
+				this._super();
+				this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+			},
+			_renderMenu: function(ul, items) {
+				var that = this,
+				currentCategory = "";
+				$.each(items, function(index, item) {
+					var li;
+					if (item.category != currentCategory) {
+						ul.append("<li class='ui-autocomplete-category red'>" + item.category + "</li>");
+						currentCategory = item.category;
+					}
+					li = that._renderItemData(ul, item);
+					if (item.category) {
+						li.attr("aria-label", item.category + " : " + item.label);
+					}
+				});
+			},
+			// Replace the matched text with a custom span.
+			// This span uses the class found in the highlightClass option
+			_renderItem: function( ul, item ) {
+      // // regex is a regular expression, used to find and capture the query string withing the item label
+      // // gi is flags for global match and ignore case
+      // var regex = new RegExp("(" + this.term + ")", "gi")
+      // // cls is the class applied to any matching text
+      // cls = this.options.highlightClass,
+      // // template is a new span element we'll replace the query string with inside the label
+      // template = "<span class='" + cls + "'>$1</span>",
+      // // label the resulting HTML we'll pass to the menu item
+      // label = item.label.replace( regex, template ),
+      // $li = $("<li/>").appendTo(ul);
+      // // Create and return the custom menu item content
+      // ("<a/>").attr("href", "#")
+      // 	 .html(label)
+      // 	 .appendTo($li);
+      // // return $li;
+			var $a = $("<a></a>").text(item.label);
+			highlightText(this.term, $a);
+			return $("<li></li>").append($a).appendTo(ul);
+			}
+		});
+
+
+
+
+    /*
+    $.widget( "custom.catcomplete", $.ui.autocomplete, {
+      _create: function() {
+        this._super();
+        this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+      },
+      _renderMenu: function( ul, items ) {
+        var that = this,
+          currentCategory = "";
+        $.each( items, function( index, item ) {
+          var li;
+          if ( item.category != currentCategory ) {
+            ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
+            currentCategory = item.category;
+          }
+          li = that._renderItemData( ul, item );
+          if ( item.category ) {
+            li.attr( "aria-label", item.category + " : " + item.label );
+          }
+        });
+      }
+      _renderItem: function( ul, item ) {
+        var $a = $("<a></a>").text(item.label);
+				highlightText(this.term, $a);
+				return $("<li></li>").append($a).appendTo(ul);
+			}
+    });
+*/
+
+
+
+    $( "#search" )
+    // don't navigate away from the field on tab when selecting an item
+    .bind( "keydown", function( event ) {
+      if ( event.keyCode === $.ui.keyCode.TAB &&
+          $( this ).catcomplete( "instance" ).menu.active ) {
+        event.preventDefault();
+      }
+    })
+    .catcomplete({
+      minLength: 0,
+      highlightClass: "blue-text",
+      source: function( request, response ) {
+        // delegate back to catcomplete, but extract the last term
+        response( $.ui.autocomplete.filter(
+          data, extractLast( request.term ) ) );
+      },
+      focus: function() {
+        // prevent value inserted on focus
+        return false;
+      },
+      select: function( event, ui ) {
+        var terms = split( this.value );
+        // remove the current input
+        terms.pop();
+        // add the selected item
+        terms.push( ui.item.value );
+        // add placeholder to get the comma-and-space at the end
+        terms.push( "" );
+        this.value = terms.join( ", " );
+        return false;
+      }
+    });
+
+
+/*
+    $( "#search" )
+      // don't navigate away from the field on tab when selecting an item
+      .on( "keydown", function( event ) {
+        if ( event.keyCode === $.ui.keyCode.TAB &&
+            $( this ).autocomplete( "instance" ).menu.active ) {
+            event.preventDefault();
+        }
+      })
+      .autocomplete({
+        minLength: 0,
+        source: function( request, response ) {
+          // delegate back to autocomplete, but extract the last term
+          response( $.ui.autocomplete.filter(
+              availableTags, extractLast( request.term ) ) );
+        },
+        focus: function() {
+          // prevent value inserted on focus
+          return false;
+        },
+        select: function( event, ui ) {
+          var terms = split( this.value );
+          // remove the current input
+          terms.pop();
+          // add the selected item
+          terms.push( ui.item.value );
+          // add placeholder to get the comma-and-space at the end
+          terms.push( "" );
+          this.value = terms.join( ", " );
+          return false;
+        }
+      })
+      .catcomplete({
+        delay: 0,
+        source: data
+      });
+*/
+
+
+
+
+  } );
+
+
+  </script>
+</head>
+<body>
+
+<div class="ui-widget">
+  <label for="search">Search: </label>
+  <input id="search">
+</div>
+
+</body>
+</html>

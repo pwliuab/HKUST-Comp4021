@@ -1,0 +1,27 @@
+<html>
+<head>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script type="text/javascript">
+      var getData = [];
+      $.ajax({
+        url: 'https://webproject.cse.ust.hk:8046/get-json-cors.php',
+        type: 'get',
+        success: function(data) {
+
+          for (i=0; i<data.length; i++)
+            $('#paragraph').append('"label" : "'+data[i].label+'", "category" : "'+data[i].category+'",</br>');
+        },
+        error: function(error) {
+          $('#paragraph').text('Something went wrong');
+        }
+      });
+</script>
+</head>
+<body>
+<div id="paragraph" class="ui-widget"></div>
+</body>
+</html>

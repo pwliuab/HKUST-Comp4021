@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Custom Autocomplete</title>
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="jquery-1.11.3.js"></script>
+	<script src="jquery-ui.js"></script>
+	<style>
+	.ui-autocomplete {
+		max-height: 100px;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+	.ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+		color: red;
+    line-height: 1.5;
+  }
+
+		.match-character {
+			// ToDo: Add properties such that the characters of each menu item in
+			//       the custom autocomplete widget that matches the search keyword
+			//       will be shown in bold, italic and blue.
+		}
+	</style>
+	<script>
+	</script>
+	<script>
+		function onDocumentReady(){
+			$(function(){
+				$("#greenbox").click(
+					function(){
+						$("#greenbox").hide();
+						$("#redbox").show();
+					}
+				)
+			})
+			$(function(){
+				$("#redbox").click(
+					function(){
+						$("#redbox").hide(); // if this is not called , greenbox will be ontop of green
+						$("#greenbox").show();
+						$('p').toggle();
+						return false;
+					}
+				)
+			})
+		$(function(){
+			$('p').click(
+				function(){
+				$("p").html("Hello World !! ");
+				alert("新年好");	 // functiion must be added to pass
+				return false;
+				});
+		});
+		// $(function(){
+		// 	$("#searchBox").autocomplete({
+		// 		minLength:2,
+		// 		delay:200,
+		// 		source:[
+		// 			{label:"java",value:"JAVA"},
+		// 			{label:"wwwww",value:"JAVA"},
+		// 			{label:"DW",value:"JAVA"}
+		// 		]
+		// 	});
+		// });
+		$(function(){
+			$("#searchBox").autocomplete({
+				minLength:2,
+				delay:200,
+						source:[
+							{label:"aaaaadaw",value:"JAVA"},
+							{label:"aaaa",value:"JAVA"},
+							{label:"java",value:"JAVA"},
+							{label:"wwwww",value:"JAVA"},
+							{label:"DW",value:"JAVA"}
+						],
+				select:function(event, ui){
+
+				}
+			}).data("ui-autocomplete")._renderItem = function(ul, item){
+				return $("<li>").append("<a>" + item.label + "<br>" + item.value + "</a>")
+				.appendTo(ul);
+			};
+		});
+
+		}
+		$( document ).ready(onDocumentReady);
+
+	</script>
+</head>
+<body>
+	<div style="background-color:green" id="greenbox">
+		sad time
+	</div>
+	<div style="background-color:red; display:none" id="redbox">
+		good time
+	</div>
+	<p>what happen right now man?</p>
+	<input type="text" id="searchBox" name="q" size="20" value="">
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version="1.1"
+     baseProfile="full"
+     width="400" height="400">
+
+		 <text x="0" y="300" style="font-size:60px;fill:red" >
+		 This is SVG text
+	  </text>
+
+</svg>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Autocomplete - Categories</title>
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery-1.11.3.js"></script>
+  <script src="jquery-ui.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  .ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .ui-autocomplete-category {
+    font-weight: bold;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    color: red;
+    line-height: 1.5;
+  }
+
+    .match-character {
+      // ToDo: Add properties such that the characters of each menu item in
+      //       the custom autocomplete widget that matches the search keyword
+      //       will be shown in bold, italic and blue.
+    }
+  </style>
+  <script>
+    var countSpecChar = 0;
+    function myAutoCompleteWidgetConstructor() {
+      this._super();
+      // tell autocompelte not to implement on category
+      this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
+
+    };
+
+
+    function renderAutoCompleteMenuItem(ul, item) {
+      terms = this.term.split(',');
+      term = terms[terms.length - 1].trim();
+
+      console.log("-----------------------");
+      /////////////////////////////////////////////////
+      ////     check category
+      ////////////////////////////////////////////////
+
+      // ToDo: Complete this function for defining how to render each menu item that
+      //       will be shown in the custom autocomplete widget
+      if(term.includes('+')){
+        var addSlash = '';
+        for(var i = 0; i<term.length; i++){
+          if(term[i] == '+'){
+            addSlash += '\\+';
+          } else {
+            addSlash += term[i];
+          }
+        }
+        term = addSlash;
+      }
+
+      var chac = '(' + term + ')';
+      regex = new RegExp(chac, 'gi');
+      console.log(regex);
+      t = item.label.replace(regex, "<em>$&</em>");
+      t = item.label.replace(regex, "<a style='color:blue; font-weight:normal;'>$&</a>");
+      return $("<li></li>").data("item.autocomplete", item)
+             .append("<a style='height:30px;'><div style='width: 100%; float: left; overflow: hidden; white-space:nowrap; text-overflow: ellipsis; text-align:left;'> "
+             + '<b>' + t + '</b>'
+             + "</div><div style='right:0; position: relative; float:right; font-size: 11px; margin-top:-15px; color:#b3b3b3;'>"
+             + "</div></a>")
+             .appendTo(ul);
+
+    };
+
+    ////////////////////////////////////////////////
+    // run first to decide which one to be displayed
+    ///////////////////////////////////////////////
+    function renderAutoCompleteMenu(ul, items) {
+      var that = this;
+      console.log("items : ");
+      console.log(items);
+      console.log(ul);
+      console.log("-=esfosefkopsekfpsoekfpo: " + this.term);
+
+      // ToDo: Complete this function for defining how to render the menu
+      var classifyCategory = {};
+      for(var i = 0; i < items.length; i ++){
+        if(!classifyCategory[items[i].category]){
+          classifyCategory[items[i].category] = [];
+          classifyCategory[items[i].category].push(items[i]);
+        } else {
+          classifyCategory[items[i].category].push(items[i]);
+        }
+      }
+      console.log(classifyCategory);
+      if(classifyCategory['']){
+        $.each(classifyCategory[''], function(index, item){
+          that._renderItemData(ul, item);
+        });
+      }
+      for(var category in classifyCategory){
+        if(category == '') {continue;}
+        ul.append("<li class='ui-autocomplete-category'>" + category + "</li>");
+        console.log(category);
+        $.each(classifyCategory[category], function(index, item){
+          that._renderItemData(ul, item);
+        });
+      }
+    };
+    ////////////////////////////////////////////////////////
+    $.widget( "custom.myautocomplete", $.ui.autocomplete, {
+      _create: myAutoCompleteWidgetConstructor,
+      _renderItem: renderAutoCompleteMenuItem,
+      _renderMenu: renderAutoCompleteMenu
+    });
+  </script>
+  <script>
+
+
+    function split( val ) {
+      return val.split( /,\s*/ );
+    }
+
+
+    function extractLast( term ) {
+      return split( term ).pop();
+    }
+
+
+    function onDocumentReady() {
+            var gg = '';
+            $.ajax({
+              url: 'https://webproject.cse.ust.hk:8046/get-json-cors.php',
+              type: 'get',
+              success: function(data) {
+                console.log(data);
+                // for local testing :
+                var testing = [
+                  { label: "annhhx10", category: "Products" },
+                  { label: "annk K12", category: "Products" },
+                  { label: "annttop C13", category: "Products" },
+                    { label: "andreas", category: "" },
+                  { label: "anders andersson", category: "People" },
+                  { label: "andreas andersson", category: "People" },
+                  { label: "andreas johnson", category: "People" },
+                  { label: "anders", category: "" },
+                  { label: "antal", category: "" },
+                ];
+                gg = data;
+                // place all the fetched data into the autocompelte search bar.
+
+              },
+              error: function(error) {
+                alert("Network error");
+                $('#paragraph').text('Something went wrong');
+              }
+            });
+
+            $( "#search" ).on( "keydown", function( event ) {
+              if ( event.keyCode === $.ui.keyCode.TAB &&
+                   $( this ).autocomplete( "instance" ).menu.active ) {
+                   event.preventDefault();
+
+              }
+            }).myautocomplete({
+              delay: 10,
+              source: function( request, response ) {
+                // delegate back to autocomplete, but extract the last term
+                console.log(requset);
+                console.log(response);
+                console.log(gg);
+                console.log("============================");
+                response( $.ui.autocomplete.filter(
+                gg, extractLast( request.term ) ) );
+
+              },
+              select: autocompleteItemSelectedHandler,
+              focus: function() {
+                  // prevent value inserted on focus
+                return false;
+              },
+            });
+      function autocompleteItemSelectedHandler(event, ui){
+        var terms = split( this.value );
+        // remove the current input
+        terms.pop();
+        // add the selected item
+        terms.push( ui.item.value );
+        // add placeholder to get the comma-and-space at the end
+        terms.push( "" );
+        this.value = terms.join( ", " );
+        return false;
+      };
+
+    };
+    $( document ).ready(onDocumentReady);
+
+  </script>
+</head>
+<body>
+
+<label for="search">Search: </label>
+<input id="search" style="width:600px">
+
+</body>
+</html>
