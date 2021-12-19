@@ -1,4 +1,4 @@
-## HKUST Comp 4021 resources
+## HKUST Comp 4021 resources 2021-2022 Fall semester
 ## Resources List
 ### HW
 ```
