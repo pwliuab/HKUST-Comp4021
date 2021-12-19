@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   version="1.1"
+   x="0px"
+   y="0px"
+   width="39.990681"
+   height="39.961021"
+   viewBox="0 0 39.990681 39.961021"
+   enable-background="new 0 0 64 64"
+   xml:space="preserve"
+   id="svg103"
+   sodipodi:docname="40_monster.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs107" /><sodipodi:namedview
+   id="namedview105"
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1.0"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   showgrid="false"
+   inkscape:zoom="13"
+   inkscape:cx="30.730769"
+   inkscape:cy="31.038462"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svg103"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0" />
+<g
+   id="レイヤー_1"
+   transform="translate(-1.2595559,-1.0350468)">
+</g>
+<g
+   id="先行して"
+   transform="matrix(0.65172568,0,0,0.65071577,-0.8141158,-0.6794323)">
+	<g
+   id="g99">
+		<g
+   id="g19">
+			<defs
+   id="defs8">
+				<filter
+   id="Adobe_OpacityMaskFilter"
+   filterUnits="userSpaceOnUse"
+   x="11.991"
+   y="57.813999"
+   width="47.542"
+   height="4.6409998">
+					<feFlood
+   result="back"
+   id="feFlood3" />
+					<feBlend
+   in="SourceGraphic"
+   in2="back"
+   mode="normal"
+   id="feBlend5" />
+				</filter>
+			</defs>
+			<mask
+   maskUnits="userSpaceOnUse"
+   x="11.991"
+   y="57.814"
+   width="47.542"
+   height="4.641"
+   id="SVGID_1_">
+				<g
+   filter="url(#Adobe_OpacityMaskFilter)"
+   id="g12">
+					
+						<image
+   overflow="visible"
+   width="53"
+   height="10"
+   xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/7AARRHVja3kAAQAEAAAAHgAA/+4AIUFkb2JlAGTAAAAAAQMA EAMCAwYAAAGXAAABvwAAAjH/2wCEABALCwsMCxAMDBAXDw0PFxsUEBAUGx8XFxcXFx8eFxoaGhoX Hh4jJSclIx4vLzMzLy9AQEBAQEBAQEBAQEBAQEABEQ8PERMRFRISFRQRFBEUGhQWFhQaJhoaHBoa JjAjHh4eHiMwKy4nJycuKzU1MDA1NUBAP0BAQEBAQEBAQEBAQP/CABEIAAoANQMBIgACEQEDEQH/ xACAAAACAwEAAAAAAAAAAAAAAAAABgIEBwUBAQAAAAAAAAAAAAAAAAAAAAAQAAEEAwEBAAAAAAAA AAAAAAYgAwQFAAIUARYRAAIBAgIIBwEAAAAAAAAAAAECEQADIQQxUWESIjIUBTBBgdITI6MVEgEA AAAAAAAAAAAAAAAAAAAg/9oADAMBAAIRAxEAAABTaUINTnlIafxkkLhTD//aAAgBAgABBQBH/9oA CAEDAAEFAEf/2gAIAQEAAQUApK2snPRQoTmetAolo38QH5KAhZ3R4WDGs5Ifav8A/9oACAECAgY/ AB//2gAIAQMCBj8AH//aAAgBAQEGPwCO4Z9clbU8QIgkbGbCmGV7w10rzBXt4T6UquxusBBc3oLH XCkCuX9291AWb7ZYgyWW6GkavsmnX+5FxJG6XtniHlgK6frF+GY6jcO7MxonRt8D/9k="
+   transform="translate(9,55)"
+   id="image10">
+					</image>
+				</g>
+			</mask>
+			<g
+   mask="url(#SVGID_1_)"
+   id="g17">
+				<ellipse
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#9c9c9d"
+   cx="35.762001"
+   cy="60.134998"
+   rx="23.771"
+   ry="2.3199999"
+   id="ellipse15" />
+			</g>
+		</g>
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#4d9b34"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 60.989,28.716 c -0.082,-1.885 -1.476,-4.18 -1.476,-4.18 0,0 -1.229,-4.18 -3.935,-9.18 C 54.923,14.209 47.545,2.815 40.824,1.749 34.981,0.822 28.446,3.061 24.594,8.225 20.742,13.389 20.742,22.651 21.561,27.651 l -1.639,6.966 c 0,0 -4.017,1.885 -6.558,2.869 -2.541,0.984 -5,4.59 -5,4.59 l -3.278,-5.328 -1.066,2.459 -2.131,-0.9 0.819,5 2.377,4.426 c 0,0 3.36,2.213 5.082,-0.738 1.722,-2.951 7.869,-2.623 7.869,-2.623 l 7.705,0.328 c 1.803,0.656 5.328,1.559 5.328,1.559 1.393,2.295 6.394,6.146 8.771,6.475 2.377,0.326 4.017,2.459 4.017,2.459 l -2.623,2.787 c -1.968,0.41 -4.098,2.213 -4.098,2.213 l 2.366,0.82 h 7.306 c -0.573,-2.525 2.623,-5.902 2.623,-5.902 0,0 0.164,-4.426 -1.64,-4.918 -1.804,-0.492 -3.032,-8.279 -3.032,-8.279 0,0 0,-2.951 2.377,-7.049 2.377,-4.097 1.967,-5.655 1.967,-5.655 l 4.427,1.803 c 0.163,2.705 3.524,5.082 3.524,5.082 -0.902,0.574 -1.394,5 -1.394,5 -2.869,0.164 -2.787,1.721 -2.787,1.721 l 1.64,0.328 -3.115,1.475 c 1.214,1.725 2.324,1.162 2.757,0.828 l 0.194,-0.172 c 0,0 -0.071,0.076 -0.194,0.172 l -1.937,1.713 c 2.705,1.559 3.934,-0.328 3.934,-0.328 l 0.492,1.641 c 0,0 2.623,-0.412 3.278,-1.969 0.655,-1.557 0.082,-5.162 0.082,-5.162 4.017,-10.33 1.067,-10.74 0.985,-12.626 z"
+   id="path21" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 54.021,30.684 c 0,0 -3.063,-2.693 -4.761,-2.957 -0.086,-0.092 -0.247,-0.107 -0.531,0.006 -0.518,0.144 -0.753,0.26 -0.92,0.461 -1.997,1.139 -4.895,3.475 -4.895,3.475 0,0 -2.582,1.146 -2.172,1.638 0.003,0.004 0.012,0.006 0.016,0.01 -0.481,0.834 -0.091,2.105 2.156,4.17 1.43,1.313 1.189,6.885 1.845,4.426 0.656,-2.459 0.749,-4.824 2.055,-6.469 1.306,-1.645 2.617,-5.989 2.289,-6.481 z"
+   id="path23" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 39.411,26.386 c 0,0 0.143,-3.016 -0.189,-3.563 -0.332,-0.548 1.873,1.338 2.186,2.833 0.313,1.493 -2.015,2.882 -1.997,0.73 z"
+   id="path25" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#ffffff"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 25.497,9.044 c 1.229,-0.656 5.41,-2.049 9.918,-1.229 0,0 3.197,5 -1.722,9.262 -3.496,3.029 -8.279,0 -8.853,-2.213 -0.798,-3.081 0.657,-5.82 0.657,-5.82 z"
+   id="path27" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 41.398,14.659 c 0,0 1.141,2.254 3.026,2.746 1.885,0.492 3.777,0 3.777,0 l -2.377,-3.279 z"
+   id="path29" />
+		
+			<ellipse
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#b2eda4"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   cx="28.57"
+   cy="14.126"
+   rx="3.7290001"
+   ry="3.6889999"
+   id="ellipse31" />
+		<ellipse
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#112d01"
+   cx="27.424"
+   cy="14.659"
+   rx="2.0079999"
+   ry="2.0899999"
+   id="ellipse33" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#4d9b34"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 41.398,14.044 c 0,0 2.869,4.017 7.951,1.885 0,0 -3.606,-2.869 -3.853,-5.328"
+   id="path35" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#4d9b34"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 23.611,10.11 c 0,0 -3.278,4.016 -5.574,3.688 0,0 1.475,3.853 3.36,2.705 z"
+   id="path37" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#ffffff"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 39.596,18.962 -4.591,4.016 4.263,2.131 c 0,10e-4 0.901,-0.819 0.328,-6.147 z"
+   id="path39" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 20.826,31.278 c 0,0 1.615,-1.793 4.015,-3.581 l -3.362,1.523 z"
+   id="path41" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 19.592,15.274 2.399,-1.148 -0.512,2.659 c 0,0 -1.531,0.12 -1.887,-1.511 z"
+   id="path43" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 23.039,25.141 c 2.571,-0.234 7.295,0.901 8.524,1.803 1.23,0.902 -1.436,3.372 -3.934,1.722 -4.59,-3.033 -4.836,-2.132 -4.59,-3.525 z"
+   id="path45" />
+		<g
+   id="g53">
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 20.25,34.043 c 0,0 7.726,-2.115 10.705,-3.274 1.841,-0.716 6.099,-3.275 6.099,-3.275 0,0 -2.87,0.531 -4.345,1.011 -1.475,0.48 -12.175,3.959 -12.175,3.959 z"
+   id="path47" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 30.519,32.896 c 1.536,-0.737 4.35,-3.089 6.877,-3.676 2.527,-0.587 7.686,-5.102 9.495,-6.829 0,0 -4.306,7.451 -9.017,8.164 -4.711,0.713 -7.46,2.997 -9.304,4.062 z"
+   id="path49" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 36.437,33.463 c 0,0 2.339,-0.606 4.962,-2.185 2.623,-1.579 6.804,-4.939 6.804,-4.939 l -2.828,4.216 c 0,0 -6.544,3.487 -13.375,7.833 0,0.001 2.016,-3.046 4.437,-4.925 z"
+   id="path51" />
+		</g>
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 25.416,44.207 c 0,0 -3.424,-1.676 -3.937,-3.523 -1.474,0 0.512,2.154 -5.818,2.623 -1.924,0.143 -4.672,1.967 -2.705,1.639 1.967,-0.328 10.493,-1.231 12.46,-0.739 z"
+   id="path55" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 31.398,45.848 -2.213,-3.771 c 0,0 -0.46,3.607 0.344,3.771 0.804,0.164 1.869,0 1.869,0 z"
+   id="path57" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 38.448,51.912 c 1.803,0.164 4.59,-0.244 5.614,0.574 1.024,0.82 -0.451,1.967 -0.451,1.967 z"
+   id="path59" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 38.448,59.945 c 0,0 3.853,0.574 5.082,-0.328 1.229,-0.9 3.852,-2.295 3.852,-2.295 l -0.573,3.689 c 0,10e-4 -7.376,0.657 -8.361,-1.066 z"
+   id="path61" />
+		<polygon
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   points="55.415,34.043 58.693,35.848 55.907,40.355 57.055,36.094 "
+   id="polygon63" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#3c7c24"
+   d="m 32.299,19.7 c 0,0 3.853,-1.229 5.575,-4.59 0,0 -0.165,4.59 -5.575,4.59 z"
+   id="path65" />
+		<g
+   id="g83">
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 44.425,42.834 c 0,0 -2.042,2.354 -5.977,2.15 -3.935,-0.204 -3.033,4.225 -0.574,4.715 2.459,0.492 2.701,-1.803 2.701,-1.803 0,0 -2.209,2.131 -2.701,0.902 -0.492,-1.23 -0.737,-2.313 0.574,-2.879 1.312,-0.564 2.787,-0.568 3.688,-0.936 0.901,-0.368 2.663,-1.432 2.663,-1.432 z"
+   id="path67" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 38.83,47.404 c 0,0 1.906,-1.639 2.606,0 0.7,1.639 -1.438,3.77 -5,3.197 l 0.959,0.738 c 0,0 5.478,-0.41 5.068,-3.115 -0.41,-2.705 -3.251,-2.048 -3.633,-0.82 z"
+   id="path69" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 43.857,46.912 c 0,0 2.358,2.592 0.567,3.854 l 1.81,1.146 c 0,0 -0.164,-4.098 -2.377,-5 z"
+   id="path71" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 47.298,50.602 c 0,0 0.493,2.949 -1.063,3.605 l 1.968,1.148 c -0.001,0 1.068,-2.511 -0.905,-4.753 z"
+   id="path73" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 15.661,36.537 1.703,-0.75 c 0,0 2.925,-0.268 4.627,1.412 1.702,1.682 2.85,6.025 2.85,6.025 0,0 -2.791,-4.389 -4.016,-5.246 -1.639,-1.148 -5.164,-1.441 -5.164,-1.441 z"
+   id="path75" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 18.611,39.863 c 0,0 6.145,3.408 2.868,4.654 l -3.933,-0.52 c 0,10e-4 6.147,0.212 1.065,-4.134 z"
+   id="path77" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 49.842,29.221 c 0,0 -2.296,-6.591 1.803,-7.564 4.099,-0.973 1.722,-2.694 1.722,-2.694 0,0 3.257,1.893 0.686,3.037 -2.571,1.144 -4.813,0.474 -3.446,7.489 z"
+   id="path79" />
+			<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#364415"
+   d="m 55.04,25.602 c 0,0 -2.411,-1.714 0.703,-3.603 3.114,-1.889 0.464,-5.446 0.464,-5.446 l 2.077,5.446 c 0,0 -0.271,0.254 -2.067,0.726 -1.796,0.472 -1.177,2.877 -1.177,2.877 z"
+   id="path81" />
+		</g>
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="none"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 60.989,28.716 c -0.082,-1.885 -1.476,-4.18 -1.476,-4.18 0,0 -1.229,-4.18 -3.935,-9.18 C 54.923,14.209 47.545,2.815 40.824,1.749 34.981,0.822 28.446,3.061 24.594,8.225 20.742,13.389 20.742,22.651 21.561,27.651 l -1.639,6.966 c 0,0 -4.017,1.885 -6.558,2.869 -2.541,0.984 -5,4.59 -5,4.59 l -3.278,-5.328 -1.066,2.459 -2.131,-0.9 0.819,5 2.377,4.426 c 0,0 3.36,2.213 5.082,-0.738 1.722,-2.951 7.869,-2.623 7.869,-2.623 l 7.705,0.328 c 1.803,0.656 5.328,1.559 5.328,1.559 1.393,2.295 6.394,6.146 8.771,6.475 2.377,0.326 4.017,2.459 4.017,2.459 l -2.623,2.787 c -1.968,0.41 -4.098,2.213 -4.098,2.213 l 2.366,0.82 h 7.306 c -0.573,-2.525 2.623,-5.902 2.623,-5.902 0,0 0.164,-4.426 -1.64,-4.918 -1.804,-0.492 -3.032,-8.279 -3.032,-8.279 0,0 0,-2.951 2.377,-7.049 2.377,-4.097 1.967,-5.655 1.967,-5.655 l 4.427,1.803 c 0.163,2.705 3.524,5.082 3.524,5.082 -0.902,0.574 -1.394,5 -1.394,5 -2.869,0.164 -2.787,1.721 -2.787,1.721 l 1.64,0.328 -3.115,1.475 c 1.214,1.725 2.324,1.162 2.757,0.828 l 0.194,-0.172 c 0,0 -0.071,0.076 -0.194,0.172 l -1.937,1.713 c 2.705,1.559 3.934,-0.328 3.934,-0.328 l 0.492,1.641 c 0,0 2.623,-0.412 3.278,-1.969 0.655,-1.557 0.082,-5.162 0.082,-5.162 4.017,-10.33 1.067,-10.74 0.985,-12.626 z"
+   id="path85" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#4d9b34"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="M 39.76,26.667 39.268,25.109 C 29.185,19.044 18.612,22.814 18.612,22.814 l 3.361,2.459"
+   id="path87" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#ffffff"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 23.365,21.831 -3.606,-3.606 c 0,0 -0.574,1.312 0.41,4.344 z"
+   id="path89" />
+		<polygon
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#c6c6c6"
+   points="39.268,25.11 37.874,24.162 39.786,21.657 "
+   id="polygon91" />
+		<polygon
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="#c6c6c6"
+   points="20.115,22.392 19.661,20.396 21.991,22.019 "
+   id="polygon93" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="none"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 39.596,18.962 -4.591,4.016 4.263,2.131 c 0,10e-4 0.901,-0.819 0.328,-6.147 z"
+   id="path95" />
+		<path
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   fill="none"
+   stroke="#112d01"
+   stroke-miterlimit="10"
+   d="m 23.365,21.831 -3.606,-3.606 c 0,0 -0.574,1.312 0.41,4.344 z"
+   id="path97" />
+	</g>
+	<g
+   id="monster">
+	</g>
+</g>
+</svg>

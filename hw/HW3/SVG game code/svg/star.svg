@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="star.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.74118967"
+     inkscape:cx="397.33419"
+     inkscape:cy="561.93443"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#ffdd55;stroke:#000000;stroke-width:1.00157"
+       id="path857"
+       inkscape:flatsided="false"
+       sodipodi:sides="5"
+       sodipodi:cx="-246.90036"
+       sodipodi:cy="132.21986"
+       sodipodi:r1="39.219223"
+       sodipodi:r2="19.609612"
+       sodipodi:arg1="0.85843873"
+       sodipodi:arg2="1.4867573"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m -221.2659,161.90187 -23.98843,-10.1416 -21.95381,14.01166 2.2324,-25.94828 -20.10998,-16.54948 25.36813,-5.89531 9.52516,-24.239806 13.44596,22.304776 25.99686,1.56846 -17.05807,19.68042 z"
+       transform="scale(0.26458333)"
+       inkscape:transform-center-x="0.26916117"
+       inkscape:transform-center-y="-0.73140684"
+       inkscape:export-filename="C:\Users\paul\path857.png"
+       inkscape:export-xdpi="62.580002"
+       inkscape:export-ydpi="62.580002" />
+  </g>
+</svg>
