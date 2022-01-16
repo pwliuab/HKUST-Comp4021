@@ -1,3 +1,2 @@
-
-jQuery autocomplete customization
+# jQuery autocomplete customization
 
