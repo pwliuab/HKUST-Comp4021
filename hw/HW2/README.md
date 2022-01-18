@@ -7,7 +7,7 @@
 2. highlight search keyword
 3. seperate result by comma
 4. result separated by category
-==> Open pptx to read more details
+==> Open /description/jquery-autocomplete-project.pdf
 ```
 ## Source code:
 ```
