@@ -36,3 +36,7 @@ Score
 2. double click game.html
 
 ```
+## Screen Shot
+- initial page
+
+- game page
