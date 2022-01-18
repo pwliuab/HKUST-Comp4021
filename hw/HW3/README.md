@@ -43,3 +43,8 @@ Score
 ![](image.png)
 
 - game page
+<br/>
+
+![](game_page.png)
+
+
