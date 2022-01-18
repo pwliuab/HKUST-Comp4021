@@ -38,5 +38,8 @@ Score
 ```
 ## Screen Shot
 - initial page
+<br/>
+
+![](image.png)
 
 - game page
