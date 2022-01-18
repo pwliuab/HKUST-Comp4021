@@ -39,7 +39,7 @@ Grading Scheme:
 - Correctness under different speeds: 10
 ```
 
-### how to run / view the source code:
+### How to run / view the source code:
 ```
   To run the web
   -  double click the hammer.html
