@@ -44,19 +44,12 @@ Comp 4021 2021-2022 fall
 303_xml_dtd_short.pdf
 4021-WCAG-12p.pdf
 4021_CSS.pdf
-Comp 4021 2021-2022 fall
 4021_JSON.pptx
-Comp 4021 2021-2022 fall
 4021_cookies_js.pdf
 4021_divs_maps.pdf
-Comp 4021 2021-2022 fall
 4021_javascript_settimeout.pdf
-Comp 4021 2021-2022 fall
 4021_jquery_autocomplete_menu.pdf
-Comp 4021 2021-2022 fall
 4021_jquery_intro.pdf
-Comp 4021 2021-2022 fall
 4021_jquery_more.pdf
-Comp 4021 2021-2022 fall
 SVG_basic.pdf
 ```
