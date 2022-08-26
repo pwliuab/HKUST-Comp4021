@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript">
+        //<![CDATA[
+        function clearMessage() {
+
+              try {
+                var name = window.parent.frames["message"].document.getElementById("username");
+                if (name != "") {
+                    window.parent.frames["message"].location.reload();
+                }
+            } catch (e) { }
+        }
+
+        //username input checking
+       function checkInput(e) {
+            //username cannot be empty
+            //username cannot contain illeagl character
+            var name = document.getElementById("name");
+            const validValue = "^[A-Za-z0-9_]*$";
+
+            var checkInput = new RegExp(validValue);
+            // prevent empty value input.
+            if(name.value == ''){
+              alert('Please enter your Name first before login to the chatroom!');
+              return false;
+            }
+            // only allow valid value to be inputed
+            if(!checkInput.test(name.value)){
+              alert('Please enter valid name, Only the combinations of characters, number and _ is allowed');
+              return false
+            }
+            // checkImage
+            var imageFile = document.getElementById('img');
+            console.log(imageFile);
+            if(imageFile.value == ''){
+              alert("Please upload an image!");
+              return false;
+            }
+            // if(imageFile.value == ''){
+            //   alert("Please upload an image");
+            //   return false;
+            // }
+            return true;
+
+        }
+
+        </script>
+    </head>
+
+    <body onload="clearMessage()">
+        <form method="post" action="login.php" enctype="multipart/form-data" onsubmit="javascript:return checkInput(event)">
+            <table border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                    <td>Please enter your user name:</td>
+                    <td><input class="text" name="name" id="name" type="text" size="20" maxlength="10" /></td>
+
+                </tr>
+                <tr>
+                  <td align ="left">Please upload your image:</td>
+                  <td><input class="text" type="file" id="img" name="img" accept="image/*"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2"><input class="button" type="submit" value="Go!" style="width: 150px" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
